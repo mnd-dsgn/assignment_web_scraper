@@ -43,7 +43,6 @@ class DiceScraper
     CSV.open("listings.csv", "a") do |csv|
       until (i == search_results.size/2)
 
-
         csv << [title(search_results[i])]
         csv << [company_name(search_results[i])]
         csv << [link(search_results[i])]
@@ -101,4 +100,4 @@ class DiceScraper
 end
 
 scraper = DiceScraper.new
-scraper.scrape#('www.google.com')
+scraper.scrape
